@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LaundryKuy - Manajemen Stok</title>
+    <link rel="stylesheet" href="src/css/style.css" />
+    <!-- SweetAlert2 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11.5.6/dist/sweetalert2.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">LaundryKuy - Manajemen Stok</h1>
+      <form id="stock-form">
+        <div class="form-group">
+          <label for="item-id">ID Barang</label>
+          <input
+            type="text"
+            id="item-id"
+            placeholder="Masukkan ID Barang"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="item-name">Nama Barang</label>
+          <input
+            type="text"
+            id="item-name"
+            placeholder="Masukkan nama barang"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="item-stock">Stok</label>
+          <input
+            type="number"
+            id="item-stock"
+            placeholder="Masukkan jumlah stok"
+            min="0"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="item-price">Harga per Unit</label>
+          <input
+            type="number"
+            id="item-price"
+            placeholder="Masukkan harga per unit"
+            min="0"
+            required
+          />
+        </div>
+        <button type="submit" class="btn-save">Simpan</button>
+      </form>
+
+      <h2 class="subtitle">Data Stok</h2>
+      <table id="stock-table">
+        <thead>
+          <tr>
+            <th>ID Barang</th>
+            <th>Nama Barang</th>
+            <th>Stok</th>
+            <th>Harga per Unit</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <!-- SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.5.6/dist/sweetalert2.min.js"></script>
+    <script src="src/js/app.js" type="module"></script>
+  </body>
+</html>
